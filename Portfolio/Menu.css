@@ -1,0 +1,126 @@
+
+.menu {
+    display: flex;
+    flex-direction: row;
+    position: sticky;
+    top: 0;
+    padding: 5px;
+    /* Espaciado interno */
+    border-radius: 10px;
+    /* Bordes redondeados */
+    justify-content: flex-end;
+    /* Alinea el contenido a la derecha */
+    align-items: center;
+    border: 15px solid var(--fondo-principal);
+    background: var(--fondo-principal);
+    /* Fondo semi-transparente para el contenedor especial */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    /* Sombra para dar profundidad */
+    z-index: 1000;
+}
+
+.logcoria {
+    font-family: 'Playfair Display', serif;
+    position: absolute;
+    top: 20px;
+    left: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--offwhite);
+}
+
+
+.bot1 {
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+    padding: 10px 20px;
+    text-align: center;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.bot1::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--azul-neon);
+    transition: all 0.3s ease;
+}
+
+.bot1:hover::after {
+    width: 100%;
+}
+
+.bot1:hover {
+    transform: translateY(-2px);
+}
+
+.bot-llamativo {
+    display: inline-block;
+    padding: 2px;
+    border-radius: 10px;
+    background: linear-gradient(-30deg, var(--azul-neon), var(--melon-neon));
+    transition: all 0.4s ease;
+}
+
+.bot2 {
+    background: linear-gradient(-30deg, var(--azul-neon), var(--melon-neon));
+    /* Gradiente en el botón */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    /* Borde redondeado para el botón */
+    font-size: 16px;
+    color: #fff;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s ease;
+    /* Suaviza la animación del botón */
+}
+
+.bot2::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0));
+    transition: all 0.6s ease;
+    transform: translate(-50%, -50%) scale(0);
+    z-index: 0;
+    border-radius: 50%;
+}
+
+.bot2:hover::before {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.bot2:hover {
+    background: linear-gradient(-100deg, var(--azul-neon), var(--melon-neon));
+    /* Invertir gradiente al pasar el ratón */
+    color: #333;
+    transform: scale(1.05);
+    /* Aumenta ligeramente el tamaño del botón */
+    box-shadow: 0 4px 15px rgba(93, 224, 230, 0.6);
+    /* Añade un sutil resplandor */
+}
+
+.bot2:hover~.bot-llamativo {
+    transform: rotate(2deg);
+    /* Gira ligeramente el marco al pasar el ratón */
+}
+
+.bot2:active {
+    transform: scale(0.95);
+}
+
+

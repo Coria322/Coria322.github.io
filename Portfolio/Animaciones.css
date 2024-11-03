@@ -1,0 +1,30 @@
+/* Fade con movimiento y blur */
+@keyframes fadeOut {
+    from { 
+        opacity: 1; 
+        filter: blur(0) brightness(1);
+        transform: translateY(0) scale(1) rotate(0);
+
+    }
+    to {
+         opacity: 0; 
+         filter: blur(5px) brightness(0.5);
+         transform: translateY(-50px) scale(0.8) rotate(-10deg); 
+        }
+}
+
+/* Fade con movimiento de entrada y blur */
+@keyframes fadeIn {
+    from {
+        opacity: 0; 
+        filter: blur(5px) brightness(0.5);
+        transform: translateY(50px) scale(0.8) rotate(10deg);
+
+    }
+    to {
+        opacity: 1; 
+        filter: blur(0) brightness(1);
+        transform: translateY(0) scale(1) rotate(0);
+    }
+}
+
