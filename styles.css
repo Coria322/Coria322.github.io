@@ -140,7 +140,6 @@ section li{
     opacity: 1; /* Iniciar en 0 */
     animation-duration: 0.5s;
     animation-name: fadeOut;
-    /* animation-timeline: view(block -10% 80%); */
     animation-timeline: view(auto 99%);
 }
 
