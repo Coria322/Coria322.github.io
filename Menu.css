@@ -62,6 +62,10 @@
     transform: translateY(-2px);
 }
 
+.bot1:active{
+    transform: translateY(2px);
+}
+
 .bot-llamativo {
     display: inline-block;
     padding: 2px;
@@ -123,4 +127,7 @@
     transform: scale(0.95);
 }
 
+.bot-menu{
+    text-decoration: none; /* Quita el subrayado */
+}
 
