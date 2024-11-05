@@ -1,0 +1,117 @@
+:root {
+    --fondo-principal: #222222;
+    --azul-neon: #3498db;
+    --azul-neon2: #5de0e6;
+    --melon-neon: #fad0c4;
+    --offwhite: #fffff2;
+}
+
+.carrusel {
+    margin-top: 2%;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto; /* Asegúrate de que el overflow sea solo horizontal */
+    overflow-y: hidden;
+}
+
+.carrusel::-webkit-scrollbar {
+    width: auto; /* Hacer la scrollbar más delgada */
+}
+
+.carrusel::-webkit-scrollbar-track {
+    background: var(--fondo-principal); /* Color del track de la scrollbar */
+    border-radius: 2px; /* Bordes redondeados del track */
+}
+
+.carrusel::-webkit-scrollbar-thumb {
+    position: relative; /* Necesario para posicionar el pseudo-elemento */
+    background: linear-gradient(60deg, var(--azul-neon2), var(--melon-neon));
+    border-radius: 20px;
+    height: 2px;
+}
+
+.elemento {
+    flex: 1 0 auto;
+    margin: 20px 50px;
+    background: linear-gradient(60deg, var(--azul-neon), var(--azul-neon2));
+    width: 300px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    border-radius: 10px;
+    position: relative;
+    transition: all 0.4s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+}
+/* Efecto de hover con borde llamativo */
+.elemento:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(93, 224, 230, 0.8);
+    background: linear-gradient(60deg, var(--azul-neon), var(--azul-neon2), var(--melon-neon));
+    border-color: var(--melon-neon); /* Cambia el borde al color 'melon-neon' */
+}
+
+/* Pseudo-elemento para el efecto radial */
+.elemento:hover::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0));
+    transition: all 0.6s ease;
+    transform: translate(-50%, -50%) scale(1);
+    z-index: 0;
+    border-radius: 50%;
+}
+
+.elemento::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0));
+    transition: all 0.6s ease;
+    transform: translate(-50%, -50%) scale(0);
+    z-index: 0;
+    border-radius: 50%;
+}
+
+/* Efecto al hacer clic */
+.elemento:active {
+    transform: scale(0.95);
+}
+
+
+.imagen {
+    width: 200px;
+    height: 200px;
+    margin: 10%;
+    border-radius: 14px;
+    border: 5px solid black;
+}
+
+.nombre{
+    font-family: 'Playfair Display SC', serif;
+    font-size: 1.5em; /* Tamaño del título */
+    font-weight: 700; /* Peso para un impacto visual fuerte */
+    line-height: 1.2; /* Espaciado entre líneas */
+    margin-bottom: 20px; /* Espacio inferior */
+    color: black;
+
+}
+
+.desc{
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.75em;
+    line-height: 1.5;
+    text-wrap: pretty;
+    color: black;
+
+}

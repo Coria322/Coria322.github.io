@@ -10,9 +10,13 @@
 html{
     overflow-x: hidden;
     overflow-y: hidden;
-    height: 98%;
+    height: 100%;
     margin: 0;
     padding: 5px;
+}
+
+body::-webkit-scrollbar{
+    display: none;
 }
 
 body{
@@ -66,6 +70,13 @@ section li{
     height: 100%;
 }
 
+.c{
+    transform: translateY(50px);
+    color: var(--offwhite);
+    width: 100%;
+    height: 100%;
+}
+
 .redondoimg{
     grid-column: 3;
     grid-row: 2 / span 2;
@@ -94,6 +105,14 @@ section li{
     grid: gap 10px;
 }
 
+.cont2{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    grid-template-columns: repeat(4, minmax(22%, 1fr));
+    grid-auto-rows: 270px;
+}
+
 #TS1{
     grid-row: 1;
 }
@@ -108,16 +127,12 @@ section li{
     grid-row: 3;
 }
 
-/* (Mantén las animaciones que ya tienes aquí) */
+#TS2{
+    text-align: center;
+}
 
-/* Estilos de secciones */
-.section {
-    min-height: 100vh; /* Cada sección ocupará toda la altura de la ventana */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    opacity: 0; /* Inicialmente oculto */
-    transition: opacity 0.5s ease; /* Transición suave para opacidad */
+#TS3{
+    text-align: center;
 }
 
 /* Secciones animadas inicialmente */
@@ -126,7 +141,85 @@ section li{
     animation-duration: 0.5s;
     animation-name: fadeOut;
     /* animation-timeline: view(block -10% 80%); */
-    animation-timeline: view(auto 85%);
+    animation-timeline: view(auto 99%);
 }
 
+.cont3 {
+    display: flex; /* Usar flexbox para alinear los iconos */
+    justify-content: center; /* Centrar horizontalmente los iconos */
+    gap: 20px; /* Espacio entre los iconos */
+}
+
+.iconos-container {
+    display: flex; /* Alinear horizontalmente los elementos dentro del contenedor */
+    justify-content: center; /* Distribuir espacio entre los íconos */
+    gap: 40px;
+}
+
+.redes-cont {
+    display: flex;
+    flex-direction: column; /* Apilar el círculo y el texto verticalmente */
+    align-items: center; /* Centrar horizontalmente */
+    text-align: center; /* Alinear texto al centro */
+    margin: 20px;
+    margin-top: 30px;
+    transition: all 0.4s ease;
+    overflow: hidden;
+}
+
+.redes-cont:hover{
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(93, 224, 230, 0.8);
+    background: solid white;
+    border-color: var(--melon-neon);
+}
+
+.redes-cont:hover::before{
+    content:' ';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(60deg, var(--azul-neon),var(--melon-neon));
+    transition: all 0.6s ease;
+    transform: translate(-50%, -50%) scale(1);
+    z-index: 0;
+    border-radius: 50;
+}
+
+.redes-cont::before{
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0));
+    transition: all 0.6s ease;
+    transform: translate(-50%, -50%) scale(0);
+    z-index: 0;
+    border-radius: 50%;   
+}
+
+
+.circulo {
+    display: inline-flex;
+    border: 4px solid black;
+    border-radius: 50%;
+    padding: 30px;
+    box-sizing: border-box;
+}
+
+.icono {
+    height: 200px; /* Ajusta el tamaño de las imágenes según tus preferencias */
+    width: 200px;
+}
+
+.nombrered {
+    font-family: 'Playfair Display', serif; /* Aplicar la fuente */
+    color: var(--offwhite); /* Color del texto */
+    margin-top: 10px; /* Espacio entre el icono y el texto */
+    padding: 15px;
+}
 
