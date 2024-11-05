@@ -120,7 +120,7 @@ section li{
 .iconos-container {
     display: flex; /* Alinear horizontalmente los elementos dentro del contenedor */
     justify-content: center; /* Distribuir espacio entre los íconos */
-    gap: 40px;
+    gap: 35px;
 }
 
 .redes-cont {
@@ -128,7 +128,8 @@ section li{
     flex-direction: column; /* Apilar el círculo y el texto verticalmente */
     align-items: center; /* Centrar horizontalmente */
     text-align: center; /* Alinear texto al centro */
-    margin: 20px;
+    margin: 15px;
+    padding: 2px;
     margin-top: 30px;
     cursor: pointer;
 }
