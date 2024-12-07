@@ -72,7 +72,7 @@
 
 }
 
-@media screen and (orientation: landscape){
+@media screen and (orientation: landscape) and (max-width: 768px){
     #img1{
         display: none;
     }
