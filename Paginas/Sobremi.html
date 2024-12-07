@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="../Estilos/stylesS.css">
     <link rel="stylesheet" href="../Estilos/Animaciones.css">
     <link rel="stylesheet" href="../Estilos/Menu.css">
+    <link rel="stylesheet" href="../Estilos/Flipcards.css">
 </head>
 
 <body>
@@ -31,11 +32,61 @@
             <h1 id="TS1" class="titulo">HOLA!!! SOY ANGEL CORIA</h1>
             <p id="TX1">Soy un Joven de 21 Años, Apasionado por la tecnología y las ciencias. Actualmente curso el 5to semestre de ingeniería de software en la Universidad Autónoma del Estado de México. A lo largo de mi Carrera he adquirido valiosas habilidades y conocimientos que espero poder utilizar en proyectos innovadores y de alto impacto. En esta sección aprenderás sobre los conocimientos técnicos que puedo utilizar para desarrollar Software</p>
             <div class="img-container">
-                <img src="..\Portfolio\imgs\Code.jpg" alt="Codigo" class="img">
+                <img src="..\Portfolio\imgs\Code.jpg" alt="Codigo" class="img" id="img1">
             </div>
         </div>
     </section>
 
-    <section class="b animated"></section>
+    <section class="b animated">
+      <h1 class="titulo" id="TS2">Mis Habilidades</h2>
+        <div class="flip-container">
+            <div class="flip-card">
+              <div class="flip-card-inner">
+                <div class="flip-card-front">
+                  <div class="icons">
+                    <img src="../Portfolio/imgs/HTML.png" alt="Icono 1">
+                    <img src="../Portfolio/imgs/CSS.png" alt="Icono 2">
+                    <img src="../Portfolio/imgs/JS.png" alt="Icono 3" id="JS">
+                  </div>
+                </div>
+                <div class="flip-card-back">
+                  <p>Uso e implementación de HTML, CSS JS y Figma para diseñar el front - end sitios web funcionales acorde a los requerimientos de los clientes</p>
+                </div>
+              </div>
+              <h3>Diseño Web</h3>
+            </div>
+          
+            <div class="flip-card">
+              <div class="flip-card-inner">
+                <div class="flip-card-front">
+                  <div class="icons">
+                    <img src="../Portfolio/imgs/java.png" alt="Java">
+                    <img src="../Portfolio/imgs/Python.png" alt="Python">
+                    <img src="../Portfolio/imgs/C.png" alt="C" id="C">
+                  </div>
+                </div>
+                <div class="flip-card-back">
+                  <p>Manejo de lenguajes de programación cómo C, Java, y Python para desarrollar soluciones utilizando Frameworks y herramientas como Maven, Apache poi, PdfBox, Tkinter, etc.</p>
+                </div>
+              </div>
+              <h3>Programación</h3>
+            </div>
+          
+            <div class="flip-card">
+              <div class="flip-card-inner">
+                <div class="flip-card-front">
+                  <div class="icons">
+                    <img src="../Portfolio/imgs/SQL.png" alt="SQL" id="SQL">
+                  </div>
+                </div>
+                <div class="flip-card-back">
+                  <p>Diseño y modelado de bases de datos relacionales, utilizando herramientas como XAMMP,  Mysql, y Access</p>
+                </div>
+              </div>
+              <h3>Bases de Datos</h3>
+            </div>
+          </div>
+             
+    </section>
 </body>
 </html>
