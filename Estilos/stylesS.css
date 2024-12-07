@@ -1,0 +1,79 @@
+#TX1{
+    display: inline-block;
+    text-align: justify;
+    width: 95%;
+    height: 20%;
+    margin-left: 2%;
+    margin-right: 2%;
+    text-wrap: pretty;
+}
+
+#TS1{
+    text-align: center;
+    margin-top: 5px;
+}
+
+#TS2{
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 25px;
+}
+
+.img-container{
+    display: flex;
+    justify-content: center;
+
+}
+
+#img1{
+    height: 400px;
+    width: 950px;
+    object-fit: cover;
+    margin-top: 20px;
+}
+
+@media(max-width: 768px) {
+    #TS1{
+        font-size: 1.5em;
+    }
+
+    #TS2{
+        font-size: 1.5em;
+    }
+
+    .img-container {
+      display: flex;
+      justify-content: center;
+      width: 100%; /* Asegura que el contenedor use todo el ancho */
+      margin-top: 10px; /* Ajusta el margen superior */
+      height: 30%;
+    }
+  
+    #TX1{
+        font-size: 3.5vw;
+    }
+
+    #img1 {
+      width: 100%;  /* Escala la imagen para adaptarse */
+      height: 100px;  /* Mantiene la proporción */
+      object-fit: cover; /* Asegura que la imagen no se recorte */
+      margin-top: 10px; /* Reduce el margen superior */
+    }
+  
+  .a{
+    margin-bottom: 10%;
+    height: auto;
+  }
+
+  .b{
+    margin-top: 10%;
+    height: auto;
+  }
+
+}
+
+@media screen and (orientation: landscape){
+    #img1{
+        display: none;
+    }
+}
