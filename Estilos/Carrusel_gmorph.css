@@ -1,0 +1,136 @@
+:root {
+    --fondo-principal: #222222;
+    --azul-neon: #3498db;
+    --azul-neon2: #5de0e6;
+    --melon-neon: #fad0c4;
+    --offwhite: #fffff2;
+}
+
+.carrusel {
+    margin-top: 2%;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto; /* Asegúrate de que el overflow sea solo horizontal */
+    overflow-y: hidden;
+    padding-right: 10px;
+    padding-left: 10px;
+    
+}
+
+
+.elemento {
+    flex: 1 0 auto;
+    margin: 20px 50px;
+    width: 300px;
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    border-radius: 10px;
+    position: relative;
+    background: rgba(255, 255, 255, 0.5); /* Fondo translúcido */
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    transition: all 0.4s ease;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    overflow: hidden;
+}
+
+
+.imagen {
+    width: 200px;
+    height: 200px;
+    margin: 12%;
+    border:3px solid rgba(0, 0, 0, 0.7);
+    border-radius: 14px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    object-fit: cover;
+}
+
+.nombre{
+    font-family: 'Playfair Display SC', serif;
+    font-size: 1.5em; /* Tamaño del título */
+    font-weight: 700; /* Peso para un impacto visual fuerte */
+    line-height: 1.2; /* Espaciado entre líneas */
+    margin-bottom: 20px; /* Espacio inferior */
+    color: black;
+    
+}
+
+.desc{
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.75em;
+    text-align: justify;
+    padding-left: 5%;
+    padding-right: 5%;
+    line-height: 1.5;
+    text-wrap: pretty;
+    color: black;
+    word-break: break-word;
+        
+}
+
+.carrusel::-webkit-scrollbar {
+    width: auto; /* Hacer la scrollbar más delgada */
+}
+
+.carrusel::-webkit-scrollbar-track {
+    background: var(--fondo-principal); /* Color del track de la scrollbar */
+    border-radius: 2px; /* Bordes redondeados del track */
+}
+
+.carrusel::-webkit-scrollbar-thumb {
+    position: relative;
+    background: linear-gradient(60deg, rgba(250, 208, 196, 0.4), rgba(93, 224, 230, 0.4)); /* Más oscuro por defecto */
+    border-radius: 20px;
+    height: 2px;
+    transition: all 0.4s ease; /* Animación suave */
+}
+
+/* Hover más claro */
+.carrusel::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(60deg, rgba(250, 208, 196, 0.8), rgba(93, 224, 230, 0.8)); /* Más claro al hacer hover */
+    backdrop-filter: blur(5px); /* Desenfoque para efecto glass */
+    border: 2px solid rgba(255, 255, 255, 0.4); /* Borde translúcido */
+    box-shadow: 0 0 10px rgba(93, 224, 230, 0.6); /* Sombra brillante */
+    height: 4px; /* Aumenta el tamaño al hacer hover */
+}
+
+
+
+/* Efecto de hover con borde llamativo */
+.elemento:hover {
+    transform: scale(1.05);
+    background: linear-gradient(20deg, rgba(250, 208, 196, 0.6), rgba(93, 224, 230, 0.6)); /* Mantiene los colores */
+    backdrop-filter: blur(8px); /* Desenfoque de fondo */
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Borde translúcido */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4); /* Sombra suave */
+}
+
+
+
+/* Pseudo-elemento para el efecto radial */
+.elemento::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
+    transition: all 0.6s ease;
+    transform: translate(-50%, -50%) scale(0);
+    z-index: 0;
+    border-radius: 50%;
+}
+
+.elemento:hover::before {
+    transform: translate(-50%, -50%) scale(1);
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0));
+}
+
+/* Efecto al hacer clic */
+.elemento:active {
+    transform: scale(0.95);
+}

@@ -1,23 +1,29 @@
-.redondoimg{
+.redondoimg {
     grid-column: 3;
     grid-row: 2 / span 2;
     width: 350px;
     height: 350px;
     padding: 5px;
-    background: linear-gradient(60deg, var(--azul-neon2), var(--melon-neon)); /* Degradado de dos colores */
+    background: linear-gradient(60deg, rgba(93, 224, 230, 0.4), rgba(250, 208, 196, 0.9)); /* Fondo translúcido */
+    backdrop-filter: blur(8px); /* Desenfoque para el efecto de vidrio */
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
+    border: 2px solid rgba(255, 255, 255, 0.1); /* Borde translúcido */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Sombra para profundidad */
 }
 
 .img1 {
     width: 345px;
-    height:345px;
-    border-radius: 50%; /* Esto mantiene la imagen completamente redonda */
+    height: 345px;
+    border-radius: 50%;
     z-index: 1;
     object-fit: cover;
+    border: 3px solid rgba(255, 255, 255, 0.2); /* Borde sutil para la imagen */
+    box-shadow: 0 0 10px rgba(93, 224, 230, 0.4); /* Sombra brillante */
 }
+
 
 .cont1{
     display: grid;
@@ -152,15 +158,19 @@
 
 .circulo {
     display: inline-flex;
-    border: 4px solid black;
+    border: 4px solid rgba(255, 255, 255, 0.2); /* Borde sutil */
     border-radius: 50%;
     padding: 30px;
     box-sizing: border-box;
+    background: rgba(255, 255, 255, 0.1); /* Fondo translúcido */
+    backdrop-filter: blur(6px); /* Desenfoque suave */
 }
 
 .icono {
-    height: 200px; /* Ajusta el tamaño de las imágenes según tus preferencias */
+    height: 200px;
     width: 200px;
+    object-fit: contain;
+
 }
 
 .nombrered {
