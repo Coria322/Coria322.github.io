@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mis Proyectos</title>
-    <link rel="icon" type="image\x-icon" href="../Portfolio/imgs/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="../Portfolio/imgs/favicon.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -15,13 +16,12 @@
     <link rel="stylesheet" href="../Estilos/stylesP.css">
     <link rel="stylesheet" href="../Estilos/Animaciones.css">
     <link rel="stylesheet" href="../Estilos/Menu.css">
-    <link rel="stylesheet" href="../Estilos/Carrusel1.css">
 </head>
 
 <body>
     <div class="menu">
         <div class="logcoria">{AC} Software Engineering</div>
-        <a href="..\index.html" class="bot-menu"><button class="bot1" >Inicio</button></a>
+        <a href="..\index.html" class="bot-menu"><button class="bot1">Inicio</button></a>
         <a href="Proyectos.html" class="bot-menu"><button class="bot1">Proyectos</button></a>
         <a href="Sobremi.html" class="bot-menu"><button class="bot1">Sobre Mi</button></a>
         <a href="Contacto.html" class="bot-menu">
@@ -29,7 +29,82 @@
                 <button class="bot2">Contáctame</button>
             </div>
         </a>
-    </div> 
+    </div>
+
+    <div class="titulo-container" id="TS1">
+        <h1 class="titulo-sticky">Proyectos</h1>
+    </div>
+
+
+        <!-- Primer Proyecto -->
+        <div class="proy-container animated">
+            <div class="laptop-cont">
+                <img src="../Portfolio/imgs/laptop.png" alt="Laptop" class="Laptop">
+                <div class="pantalla"><img src="../Portfolio/imgs/GestorInv.png" alt="Inventario CLI"
+                        class="imagen-proy"></div>
+            </div>
+            <div class="texto-derecha">
+                <h2>Inventario POI</h2>
+                <p>Este sistema fue diseñado en Java, utilizando Apache POI para facilitar la manipulación de un set de
+                    datos en excel con más de 100 mil entradas. Por medio de linea de comando permite registrar,
+                    consultar, modificar y eliminar registros del inventario. Con esta herramienta fue posible facilitar
+                    la gestión del inventario del cliente, sin la necesidad de migrar a un sistema más complejo y
+                    costoso
+                </p>
+            </div>
+        </div>
+
+        <!-- Segundo Proyecto (sin texto, solo imagen) -->
+        <div class="proy-container animated">
+            <div class="laptop-cont">
+                <img src="../Portfolio/imgs/laptop.png" alt="Laptop" class="Laptop">
+                <div class="pantalla"><img src="../Portfolio/imgs/ClickWearSystem.png" alt="ClickWearSystem"
+                        class="imagen-proy"></div>
+            </div>
+            <div class="texto-derecha">
+                <h2>Sistema Clickwear</h2>
+                <p>Sistema de punto de venta sin contacto para la tienda de ropa clickwear. Este proyecto fue realizado
+                    en Java, utilizando dependencias como Javax Mail y pdfbox. Así como una base de datos SQL
+                </p>
+            </div>
+        </div>
+
+        <!-- Tercer Proyecto -->
+        <div class="proy-container animated">
+            <div class="laptop-cont">
+                <img src="../Portfolio/imgs/laptop.png" alt="Laptop" class="Laptop">
+                <div class="pantalla"><img src="../Portfolio/imgs/Patos.png" alt="DuckHunt" class="imagen-proy"></div>
+            </div>
+            <div class="texto-derecha">
+                <h2>DuckHunt Game</h2>
+                <p>Un juego basado en el duckhunt original, diseñado en Java, implementando herramientas de programación
+                    paralela y Graphics 2D de Java. Permitiendo una experiencia dinámica y divertida
+                </p>
+            </div>
+        </div>
+
+        <!-- Cuarto Proyecto -->
+        <div class="proy-container animated" id="LAST">
+            <div class="laptop-cont">
+                <img src="../Portfolio/imgs/laptop.png" alt="Laptop" class="Laptop">
+                <div class="pantalla"><img src="../Portfolio/imgs/PlanetarioIA.png" alt="PlanetarioIA"
+                        class="imagen-proy"></div>
+            </div>
+            <div class="texto-derecha">
+                <h2>Planetario IA</h2>
+                <p>Sistema de planetario interactivo, realizado en Python. Utilizando las API de gemini y
+                    SpeechRecognition de google.
+                    Fue diseñado para Estudiar la interacción Humano - Computadora; Así como los métodos de interacción
+                    con los sistemas informáticos. Entre sus carácteristicas más importantes se encuentran: Interacción
+                    por voz, respuesta con IA de preguntas relacionadas al planeta, reconocimiento del planeta mostrado.
+                </p>
+            </div>
+        </div>
+
+
+
     <script src="../Scripts/script.js"></script>
+    <script src="../Scripts/anim.js"></script>
 </body>
+
 </html>

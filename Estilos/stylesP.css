@@ -1,0 +1,161 @@
+:root {
+    --fondo-principal: #222222;
+    --azul-neon: #3498db;
+    --azul-neon2: #5de0e6;
+    --melon-neon: #fad0c4;
+    --offwhite: #fffff2;
+}
+
+p{
+    font-family: 'Roboto', sans-serif;
+    color: var(--offwhite);
+    font-size: 18px;
+    line-height: 1.5;
+    text-wrap: pretty;
+}
+
+/* Estilos generales para el título */
+.titulo-container {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    top: 85px; /* Altura debajo del menú */
+    left: 50%; /* Centrado horizontal */
+    transform: translateX(-50%);
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+    margin-bottom: 20px;
+    border: 15px solid var(--fondo-principal);
+    background: var(--fondo-principal);
+    width: 96.2%;
+    z-index: 999;
+}
+
+.titulo-sticky {
+    font-family: 'Playfair Display SC', serif;
+    font-size: 2.5em;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    color: var(--offwhite);
+}
+
+/* Estilos de los contenedores de proyectos */
+.proy-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* 2 columnas de igual tamaño */
+    grid-template-rows: 1fr; /* Una sola fila */
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10%;
+    max-width: 96.2%;
+    padding-top: 10%;
+    height: fit-content;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 1s ease-out;
+}
+
+
+.proy-container.reveal-animation {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Staggered delay for more dynamic effect */
+.proy-container:nth-child(1).reveal-animation {
+    transition-delay: 0.2s;
+}
+
+.proy-container:nth-child(2).reveal-animation {
+    transition-delay: 0.2s;
+}
+
+.proy-container:nth-child(3).reveal-animation {
+    transition-delay: 0.2s;
+}
+
+.proy-container:nth-child(4).reveal-animation {
+    transition-delay: 0.2s;
+}
+
+/* Estilos de la laptop */
+.laptop-cont {
+    position: relative;
+    width: 100%;
+    margin-top: 20%;
+    max-width: 500px;
+    height: fit-content;  /* Asegura que el contenedor ocupe toda la altura disponible */
+}
+
+.Laptop {
+    width: 100%;
+    height: fit-content;
+    display: block;
+}
+
+.pantalla {
+    position: absolute;
+    top: 4%;  /* Ajusta según el lugar en que desees que esté la pantalla */
+    left: 9%;
+    width: 84%;  /* Ajusta el ancho de la pantalla */
+    height: 78%;  /* Ajusta la altura de la pantalla */
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.imagen-proy {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Mantiene las proporciones de la imagen dentro del marco */
+}
+
+/* Contenedor de texto */
+.texto-derecha {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    color: var(--offwhite);
+    width: 100%;
+    padding: 20px;
+    height: fit-content;  /* Evita que el contenedor de texto aumente la altura de la laptop */
+}
+
+.texto-derecha{
+    align-items: center;
+    text-align: justify;
+    text-wrap: pretty;
+}
+
+/* Estilos para el h2 */
+.texto-derecha h2 {
+    font-size: 2em;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+/* Estilos para el p */
+.texto-derecha p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    text-align: justify;
+    text-wrap: pretty;
+}
+
+
+/* Responsividad para pantallas pequeñas */
+@media (max-width: 768px) {
+    .proy-container {
+        grid-template-columns: 1fr; /* En pantallas pequeñas, la laptop y el texto se apilan */
+    }
+
+    .laptop-cont {
+        margin-bottom: 20px; /* Espacio debajo de la laptop */
+    }
+
+    .texto-derecha {
+        padding: 10px; /* Menos padding en pantallas pequeñas */
+    }
+}
