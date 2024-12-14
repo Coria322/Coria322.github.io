@@ -6,6 +6,14 @@
     --offwhite: #fffff2;
 }
 
+p{
+    font-family: 'Roboto', sans-serif;
+    color: var(--offwhite);
+    font-size: 18px;
+    line-height: 1.5;
+    text-wrap: pretty;
+}
+
 /* Estilos generales para el título */
 .titulo-container {
     position: fixed;
@@ -39,25 +47,50 @@
     grid-template-columns: 1fr 1fr; /* 2 columnas de igual tamaño */
     grid-template-rows: 1fr; /* Una sola fila */
     width: 100%;
+    margin-top: 10px;
     max-width: 96.2%;
+    padding-top: 10%;
     height: fit-content;
-    margin: 50px 10px 10px 0;
-    padding: 5% 0 10% 0;
-    height: fit-content;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 1s ease-out;
+}
+
+
+.proy-container.reveal-animation {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Staggered delay for more dynamic effect */
+.proy-container:nth-child(1).reveal-animation {
+    transition-delay: 0.2s;
+}
+
+.proy-container:nth-child(2).reveal-animation {
+    transition-delay: 0.2s;
+}
+
+.proy-container:nth-child(3).reveal-animation {
+    transition-delay: 0.2s;
+}
+
+.proy-container:nth-child(4).reveal-animation {
+    transition-delay: 0.2s;
 }
 
 /* Estilos de la laptop */
 .laptop-cont {
     position: relative;
     width: 100%;
-    max-width: 600px;
-    margin: 20px 20px 2px 0;
-    height: 35%;  /* Asegura que el contenedor ocupe toda la altura disponible */
+    margin-top: 20%;
+    max-width: 500px;
+    height: fit-content;  /* Asegura que el contenedor ocupe toda la altura disponible */
 }
 
 .Laptop {
     width: 100%;
-    height: auto;
+    height: fit-content;
     display: block;
 }
 
@@ -66,7 +99,7 @@
     top: 4%;  /* Ajusta según el lugar en que desees que esté la pantalla */
     left: 9%;
     width: 84%;  /* Ajusta el ancho de la pantalla */
-    height: 81.9%;  /* Ajusta la altura de la pantalla */
+    height: 78%;  /* Ajusta la altura de la pantalla */
     overflow: hidden;
     border-radius: 10px;
 }
@@ -109,6 +142,7 @@
     text-align: justify;
     text-wrap: pretty;
 }
+
 
 /* Responsividad para pantallas pequeñas */
 @media (max-width: 768px) {
