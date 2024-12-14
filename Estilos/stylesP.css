@@ -6,6 +6,12 @@
     --offwhite: #fffff2;
 }
 
+
+body{
+    overflow-y: scroll;
+    scroll-snap-type: y proximity;
+}
+
 p{
     font-family: 'Roboto', sans-serif;
     color: var(--offwhite);
@@ -43,6 +49,7 @@ p{
 
 /* Estilos de los contenedores de proyectos */
 .proy-container {
+    scroll-snap-align: start;
     display: grid;
     grid-template-columns: 1fr 1fr; /* 2 columnas de igual tamaño */
     grid-template-rows: 1fr; /* Una sola fila */
@@ -50,7 +57,7 @@ p{
     margin-top: 10px;
     margin-bottom: 10%;
     max-width: 96.2%;
-    padding-top: 10%;
+    padding-top: 12%;
     height: fit-content;
     opacity: 0;
     transform: translateY(50px);
@@ -93,6 +100,7 @@ p{
     width: 100%;
     height: fit-content;
     display: block;
+    
 }
 
 .pantalla {
