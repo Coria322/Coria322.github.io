@@ -12,8 +12,10 @@ document.addEventListener('DOMContentLoaded', () => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('reveal-animation');
-                // Stop observing after first reveal to prevent repeated animations
-                observer.unobserve(entry.target);
+                // No se detiene la observación, para que se active de nuevo en el futuro
+            } else {
+                // Aquí puedes agregar un efecto cuando el elemento sale de la vista, si lo deseas
+                entry.target.classList.remove('reveal-animation');
             }
         });
     };
