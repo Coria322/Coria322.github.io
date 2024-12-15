@@ -82,7 +82,7 @@
     border-radius: 8px;
     /* Borde redondeado para el botón */
     font-size: 16px;
-    color: #fff;
+    color: var(--offwhite);
     cursor: pointer;
     position: relative;
     overflow: hidden;

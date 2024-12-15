@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,13 +19,13 @@
     <link rel="stylesheet" href="../Estilos/Animaciones.css">
     <link rel="stylesheet" href="../Estilos/Menu.css">
     <link rel="stylesheet" href="../Estilos/Carrusel1.css">
-    
+
 </head>
 
-<body>
+<body class="sbody">
     <div class="menu">
         <div class="logcoria">{AC} Software Engineering</div>
-        <a href="..\index.html" class="bot-menu"><button class="bot1" >Inicio</button></a>
+        <a href="..\index.html" class="bot-menu"><button class="bot1">Inicio</button></a>
         <a href="Proyectos.html" class="bot-menu"><button class="bot1">Proyectos</button></a>
         <a href="Sobremi.html" class="bot-menu"><button class="bot1">Sobre Mi</button></a>
         <a href="Contacto.html" class="bot-menu">
@@ -32,7 +33,39 @@
                 <button class="bot2">Contáctame</button>
             </div>
         </a>
-    </div>  
+    </div>
+<div class="contactame">
+
+    <form id="solicitud" action="/submit" method="post">
+        
+        <input type="text" id="nombre" placeholder="Tu Nombre" required>
+        
+        <input type="email" id="correo" placeholder="Tu Correo" required>
+        
+        <input type="text" id="asunto" placeholder="Tu Solicitud" required>
+        
+        <div class="bot-grande">
+            <button class="bot-bonito" type="submit">Contáctame</button>
+        </div>
+        
+    </form>
+    
+    <div class="texto">
+        <h2 class="titulo">
+            Contacto
+        </h2>
+        
+        <p class="despedida">
+            Espero que mi portafolio te haya gustado. Si es así. Puedo ayudarte !!!
+            
+            Contáctame y permíteme convertir tus sueños en software ;)
+        </p>
+    </div>
+</div>
+    
+    
     <script src="../Scripts/script.js"></script>
+    <script src="../Scripts/contacto.js"></script>
 </body>
+
 </html>
